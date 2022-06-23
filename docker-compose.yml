@@ -62,6 +62,7 @@ x-airflow-common:
     - ./workspace/mount/dags:/opt/airflow/dags
     - ./workspace/mount/logs:/opt/airflow/logs
     - ./workspace/mount/plugins:/opt/airflow/plugins
+    - /var/run/docker.sock:/var/run/docker.sock
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on
